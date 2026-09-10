@@ -1,0 +1,68 @@
+import { ForensicGapItem } from '../types/playbook';
+
+export const FORENSIC_GAPS_REGISTRY: ForensicGapItem[] = [
+  {
+    id: 'GAP-001',
+    entityOrArea: 'JJ Company - Matriz de Escalamiento',
+    element: 'Fórmula Paramétrica Formal del Eje Z',
+    status: 'HUECO_IDENTIFICADO',
+    ruleOrWarning: 'El "Eje Z" está confirmado conceptualmente como variables temporales y circunstanciales para adaptar el modelo al paso del tiempo (2027-2030), pero carece de una ecuación matemática cerrada en la documentación. PROHIBIDO inventar fórmulas arbitrarias; se debe operar cualitativamente según la coyuntura del mercado.',
+    documentedSource: 'Deconstrucción del Framework Meta JJ Company (Página 1 y Sección I de Huecos).',
+  },
+  {
+    id: 'GAP-002',
+    entityOrArea: 'Fractalis & Ecosistema',
+    element: 'Protocolo Formal de Detonación del Custodio del Criterio',
+    status: 'A_RECONSTRUIR_DOCUMENTALMENTE',
+    ruleOrWarning: 'Se define la función del Custodio como el oráculo / freno de emergencia que detiene el sistema si el escalamiento sacrifica la raíz fundamental, pero el protocolo exacto de activación formal no está cerrado en el texto. Se debe regir por la Matriz de Veto (M-006) hasta la consolidación definitiva.',
+    documentedSource: 'Documento Deconstrucción Meta JJ (Página 1, Sección I).',
+  },
+  {
+    id: 'GAP-003',
+    entityOrArea: 'Meta-Arquitectura Shadow (75 IPs + 8 Meta-IPs)',
+    element: 'Nomenclatura Completa de las 8 Meta-IPs y 65 IPs Restantes',
+    status: 'A_RECONSTRUIR_DOCUMENTALMENTE',
+    ruleOrWarning: 'Se definieron con precisión los 10 dominios de Gobernanza (Talento, Criterio, Legado, Capital, Riesgo, Innovación, Adaptación, Política/Macro, Claridad, Negociación) y 10 matrices maestras. El resto de las 65 sub-fichas individuales permanecen dispersas en chats históricos y no deben ser inventadas.',
+    documentedSource: 'Matrices de Selección de Personal - Inventario Forense (Sección I de Huecos).',
+  },
+  {
+    id: 'GAP-004',
+    entityOrArea: 'Funnel de Prospección B2B (IP-2)',
+    element: 'Discrepancia Temporal "+17 Días" vs "Día 14-20" & Pricing por Tier',
+    status: 'HUECO_IDENTIFICADO',
+    ruleOrWarning: 'El usuario estipuló originalmente "+17 días" para la entrega a closers en su mensaje, mientras que el artefacto generado simplificó a "Día 14-20". Además, los rangos de $/hora por tier en Sales Navigator son estimaciones heurísticas sin benchmark empírico citado. Deben considerarse hipótesis de trabajo.',
+    documentedSource: 'Inventario Forense IP Sales Navigator (Página 63-65).',
+  },
+  {
+    id: 'GAP-005',
+    entityOrArea: 'Singularity (IP-001)',
+    element: 'Arquitectura Operativa Cerrada vs Modelo Conceptual Abierto',
+    status: 'A_RECONSTRUIR_DOCUMENTALMENTE',
+    ruleOrWarning: 'El texto declara explícitamente: "Singularity aparece como una capa de integración/transformación de sistemas, más cercana al laboratorio o arquitectura de futuro que a un servicio operativo tradicional cerrado. Esta es justamente la parte que conviene reconstruir documentalmente antes de presentarla como playbook definitivo."',
+    documentedSource: 'Transcripción ChatGPT - Sección 5 (Singularity, Página 13-14).',
+  },
+  {
+    id: 'GAP-006',
+    entityOrArea: 'Sub-Sistema de Nurturing (IP-2.1)',
+    element: 'Especificación Técnica del "AI Brand Identity Bot"',
+    status: 'HUECO_IDENTIFICADO',
+    ruleOrWarning: 'No se cuenta con la arquitectura técnica del bot de software (solo con la secuencia de 6 emails en 3 fases para leads amarillos). No se debe asumir un software específico externo sin confirmación.',
+    documentedSource: 'Inventario Forense IP Sales Navigator (Página 66-67).',
+  },
+  {
+    id: 'GAP-007',
+    entityOrArea: 'Splendor TaaS',
+    element: 'Límite de Promesa al Cliente',
+    status: 'CONFIRMADO',
+    ruleOrWarning: 'REGLA ESTRICTA CONFIRMADA: Splendor NUNCA debe prometer "Nos encargamos de todo". La promesa verificada es: "Nos hacemos responsables de la capacidad y del sistema que explícitamente contratamos".',
+    documentedSource: 'Transcripción ChatGPT - Sección 2 (Splendor Outsource, Página 6).',
+  },
+  {
+    id: 'GAP-008',
+    entityOrArea: 'Divergence Audit',
+    element: 'Veto Absoluto de Dependencia del Fundador (Regla de Sebas)',
+    status: 'CONFIRMADO',
+    ruleOrWarning: 'REGLA DE VETO CONFIRMADA: "Ninguna recomendación del Audit es válida si su implementación crea una nueva dependencia crítica del auditor/fundador. Si la solución requiere que Sebas permanezca como pieza operacional indispensable, el Audit ha fallado en arquitectura de transferencia."',
+    documentedSource: 'Transcripción ChatGPT - Sección 10 (Página 210-213).',
+  },
+];

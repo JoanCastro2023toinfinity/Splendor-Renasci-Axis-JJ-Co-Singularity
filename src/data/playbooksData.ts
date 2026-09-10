@@ -1,0 +1,371 @@
+import { CapitalDistributionItem, PlaybookStep, TriangulationFinancialExample } from '../types/playbook';
+
+export const FOUNDATIONAL_PRINCIPLES = [
+  {
+    title: 'Dependencia Invertida & Retiro del Fundador',
+    subtitle: 'El éxito del Audit no es que tú resuelvas el problema. Es que la organización ya no pueda fingir que el problema es tuyo.',
+    rule: 'Ninguna recomendación del Audit es válida si su implementación crea una nueva dependencia crítica del auditor/operador. El operador muestra el espejo y devuelve la responsabilidad.',
+  },
+  {
+    title: 'Límites de Responsabilidad Estrictos',
+    subtitle: 'Separación radical entre criterio y ejecución operativa.',
+    rule: 'Tu responsabilidad: Observar, preguntar, identificar divergencias, hacer visible la dependencia, estructurar el problema, dejar evidencia y criterios, señalar breakpoints y devolver el ownership. NO tu responsabilidad: Implementar, administrar, dirigir equipos, convertirse en COO/CSO/CFO, ejecutar la solución o ser el repositorio humano de conocimiento.',
+  },
+  {
+    title: 'Pureza de la IP Core (Sin datos agregados a los vacíos)',
+    subtitle: 'Solo lo confirmado documentalmente en el sistema.',
+    rule: 'Donde la documentación histórica no permite afirmar un detalle con seguridad, se declara explícitamente como "[A reconstruir documentalmente]" en vez de inventarlo.',
+  },
+];
+
+export const SPLENDOR_PLAYBOOK = {
+  name: 'Splendor Talent as a Service (TaaS)',
+  thesis: 'Convertir talento operativo distribuido en capacidad empresarial gestionable, reduciendo el costo/fricción de contratación sin convertir el outsourcing en una simple venta de horas.',
+  tractionChain: 'Talent → Capacity → Operations → KPI → Client Value',
+  economicUnit: 'Capacidad operacional flexible, medible y gestionada (no horas de un empleado barato).',
+  marketPain: [
+    'Contratar directamente es costoso;',
+    'Encontrar talento confiable consume tiempo;',
+    'Administrar talento remoto genera fricción;',
+    'Existe riesgo constante de mala asignación entre costo y productividad.',
+  ],
+  valueProposition: 'Vender capacidad operacional flexible, medible y gestionada. El valor está en convertir una necesidad variable del cliente en una capacidad operativa relativamente predecible.',
+  disruptionAndVerticals: [
+    'Premium Talent as a Service',
+    'Customer Service de alta resolución',
+    'Remote Assistant / Back-office',
+    'Outsource hiring / Talent placement',
+    'Posteriormente: Integración con UX y arquitectura de operaciones',
+  ],
+  triangulationFinancials: {
+    logic: 'Costo del talento → precio cliente → margen → productividad → retención/LTV',
+    agentCost: 'Agente Colombia: alrededor de USD $150',
+    clientPrice: 'Cliente: alrededor de USD $300 / semana',
+    hoursPerWeek: '30 horas / semana',
+    operationalKpi: '80 tickets / día × ~5 min / ticket',
+    keyQuestion: '¿Cuánto valor produce una unidad de capacidad frente a cuánto cuesta adquirirla, operarla y reemplazarla?',
+  } as TriangulationFinancialExample,
+  capitalDistribution: [
+    { percentage: 28, destination: 'Pago Neto al Talento', governanceFunction: 'Retención de IP, estabilidad y calidad operativa directa' },
+    { percentage: 12, destination: 'Parafiscales / Legal', governanceFunction: 'Cumplimiento, PILA y compliance legal internacional' },
+    { percentage: 7, destination: 'Closer de Élite', governanceFunction: 'Incentivo directo por adquisición de contratos de alto valor' },
+    { percentage: 7, destination: 'Campaign Manager', governanceFunction: 'Ejecución táctica y soporte de la célula de prospección' },
+    { percentage: 4, destination: 'Scalable Manager', governanceFunction: 'Supervisión de arquitectura de escalabilidad (Renasci)' },
+    { percentage: 4, destination: 'Vertical Manager', governanceFunction: 'Gobernanza y reporte de la unidad dentro del holding' },
+    { percentage: 38, destination: 'Reserva / Estructura Madre', governanceFunction: 'Inversión en I+D, reservas en USD y margen corporativo' },
+  ] as CapitalDistributionItem[],
+  tenStepsTraction: [
+    { stepNumber: 1, title: 'Lead', description: 'Identificación de cuentas y decisores con brecha de capacidad operacional.', actionRequired: 'Prospección cualificada de empresas en sectores con sobrecarga.', outputArtifact: 'Lead calificado en pipeline.', pitfallOrBreakpoint: 'Perseguir leads que no tienen dolor cuantificable.' },
+    { stepNumber: 2, title: 'Qualification', description: 'Filtrado estricto contra Non-Customer Profile (NCP) y Non-Lead Profile (NLP).', actionRequired: 'Verificar capacidad de pago, madurez, y respeto a acuerdos sin microcontrol.', outputArtifact: 'Score de admisión / Veto.', pitfallOrBreakpoint: 'Aceptar clientes que pagan tarde, cambian reglas o confunden soporte con dependencia.' },
+    { stepNumber: 3, title: 'Capacity Diagnosis', description: 'Deconstrucción de la última milla del cliente: tickets, volumen, tiempos, SLA.', actionRequired: 'Medir el burnt oculto y el costo de la capacidad faltante.', outputArtifact: 'Documento de diagnóstico de capacidad.', pitfallOrBreakpoint: 'Aceptar la descripción teórica del cliente sin verificar el flujo real.' },
+    { stepNumber: 4, title: 'Talent Sourcing', description: 'Reclutamiento de talento remoto especializado bajo el Ideal Employee Profile (IEP).', actionRequired: 'Evaluar autonomía, relación con autoridad, ritmo y ética.', outputArtifact: 'Terna de talento validada.', pitfallOrBreakpoint: 'Contratar talento brillante pero tóxico para la estructura.' },
+    { stepNumber: 5, title: 'Matching', description: 'Alineación de habilidades técnicas y humanas con los procesos del cliente.', actionRequired: 'Prueba de estrés operativo de 72 horas previa a la asignación.', outputArtifact: 'Contrato de matching operativo firmado.', pitfallOrBreakpoint: 'Forzar un matching por premura comercial.' },
+    { stepNumber: 6, title: 'Onboarding', description: 'Entrar al sistema existente del cliente sin destruirlo ni forzar reemplazos.', actionRequired: 'Mapear herramientas (Zendesk, Slack, CRM), canales, KPIs y escalamiento.', outputArtifact: 'Checklist de Onboarding completado.', pitfallOrBreakpoint: 'Intentar cambiar el stack del cliente desde el día 1.' },
+    { stepNumber: 7, title: 'KPI Framework', description: 'Establecimiento de métricas operacionales crudas y transparentes.', actionRequired: 'Definir SLAs (ej. 80 tickets/día, 5 min/ticket, calidad CSAT).', outputArtifact: 'Dashboard de KPIs operacionales en tiempo real.', pitfallOrBreakpoint: 'Medir horas silla en lugar de unidades de capacidad entregadas.' },
+    { stepNumber: 8, title: 'QA (Quality Assurance)', description: 'Auditoría continua de las entregas y conversaciones de la capacidad asignada.', actionRequired: 'Monitoreo aleatorio y calibración de respuestas semanales.', outputArtifact: 'Reporte semanal de calidad operativa.', pitfallOrBreakpoint: 'Descuidar la calidad hasta que el cliente se queje.' },
+    { stepNumber: 9, title: 'Reporting', description: 'Entrega periódica de valor medible, tiempos y ahorros producidos.', actionRequired: 'Generar reporte ejecutivo semanal/mensual con ROI tangible.', outputArtifact: 'Executive Operational Report.', pitfallOrBreakpoint: 'Reportar solo volumen sin traducir a ahorro o impacto.' },
+    { stepNumber: 10, title: 'Retention / Expansion', description: 'Revisión trimestral para ampliación de células o diversificación de funciones.', actionRequired: 'Auditar nuevas brechas operativas en el cliente para extender capacidad.', outputArtifact: 'Adenda de expansión de capacidad.', pitfallOrBreakpoint: 'Saturar a la célula actual en lugar de abrir una nueva unidad.' },
+  ] as PlaybookStep[],
+  coldToClosingSequence: 'Lead → Qualification → Discovery → Pain Quantification → Capacity Proposal → Economics → Objection Handling → Close → Onboarding',
+  delegationRule: {
+    clientKeeps: 'Decisión empresarial y criterio sobre prioridades estratégicas.',
+    splendorKeeps: 'Sourcing, matching, operación del talento y estructura de accountability.',
+  },
+  legalFramework: 'Prestación de servicios, modelo contractor internacional, no subordinación laboral, cumplimiento de PILA (en Colombia) y separación patrimonial entre proveedor y cliente.',
+  operatorBoundaries: {
+    forbiddenToPromise: '“Nos encargamos de todo” (Promesa falsa que atrae clientes parásitos y genera dependencia descontrolada).',
+    mandatoryToPromise: '“Nos hacemos responsables de la capacidad y del sistema que explícitamente contratamos”.',
+    reuseRule: 'Si el cliente ya tiene Zendesk, Slack/Discord, SOPs, CRM, macros o procesos, no se reemplazan automáticamente. Primero se pregunta: “¿Todavía producen suficiente valor con un nivel aceptable de daño colateral?”',
+  },
+};
+
+export const JJ_COMPANY_PLAYBOOK = {
+  name: 'JJ Company (Máquina Empresarial Modular)',
+  thesis: 'Una estructura empresarial capaz de convertir diferentes capacidades en unidades comercializables. Funciona como capacidad empresarial modular.',
+  tractionChain: 'Demand → Function → Productized service → Talent → Operations → KPI → Margin → Recurrence → Delegation → Scale',
+  economicUnit: 'Servicio productizado por función con unit economics independientes.',
+  marketPain: 'Pequeñas y medianas empresas necesitan people + operations + UX + support, pero no necesariamente pueden costear ni construir departamentos internos completos.',
+  valueProposition: 'Capacidad empresarial modular. No obliga al cliente a comprar una transformación completa: puede adquirir una función concreta para resolver una brecha específica.',
+  resourcesUnderManagement: [
+    'InStaff (Provisión modular de staff operativo)',
+    'Customer Service (Células de atención al cliente)',
+    'Remote Assistant (Asistentes de soporte y coordinación)',
+    'UX2ROI (Auditoría e implementación de diseño de experiencia con retorno medible)',
+    'Outsource hiring (Células de reclutamiento bajo demanda)',
+    'Recruiting especializado',
+    'Infraestructura digital y relaciones comerciales',
+  ],
+  metaFrameworkProcess: [
+    {
+      phase: '1. Problema (Diagnóstico de 8 Preguntas)',
+      questions: [
+        '¿Qué síntomas hay?',
+        '¿Qué causa esos síntomas?',
+        '¿Qué está pasando realmente?',
+        '¿A quién impacta esos síntomas?',
+        '¿Qué recursos consumen actualmente?',
+        '¿Cuál es la disponibilidad real de recursos?',
+        '¿Cuánto "burnt" (desperdicio/fricción) está oculto?',
+        '¿Si solucionamos, cuánto se libera?',
+      ],
+    },
+    {
+      phase: '2. Idea - Hipótesis (Fórmula UX Adaptada)',
+      formula: '[Problema] que se muestra en [Síntomas] cuesta [Burnt] y en caso de liberarse ese proceso [genera ganancia].',
+    },
+    {
+      phase: '3. Ideación (Metodología de Adaptación - Ala FO de Chief of Staff)',
+      steps: [
+        'Tener una lista exhaustiva de recursos en el sistema.',
+        'Buscar y usar modelos de IA para encontrar cómo otros solucionan problemas similares en otras industrias.',
+        'Entender por qué a otros les funciona: qué recursos tienen, cómo están conectados, qué construyen y qué quiebran.',
+        'Método de adaptación: ¿Qué recursos comunes hay? ¿Cómo podemos integrar lo que ellos rompen como nuestra solución? ¿Qué interacción clave da la pista para probar la hipótesis?',
+      ],
+    },
+    {
+      phase: '4. Bombardeo de Testing (Validación de Acción)',
+      coreQuestion: '¿En el momento en que esta idea entra en contacto con la capacidad de acción real, dónde se rompe?',
+      rule: 'Idear es lindo, pero debe ser hecho para ser implementable. Supera las metodologías teóricas de consultoras de escritorio.',
+    },
+    {
+      phase: '5. Capa Iterativa (Técnica de Brian Tracy)',
+      actions: [
+        'Responder de 7 a 20 formas distintas a cada punto de quiebre identificado.',
+        'Cruzar con lo que ya funciona actualmente en el sistema del cliente.',
+        'Cruzar con los otros puntos de quiebre detectados en la red.',
+        'Reutilizar arquitectura cruzada: mezclar expertos de nicho + modelos de IA profundos con inputs de los problemas reales.',
+      ],
+    },
+    {
+      phase: '6. Plan de Tracción Mínimo (Ejecución)',
+      points: [
+        '1. ¿Cuál es la idea mínima viable que valida o nos da la data en el mercado para seguir o mejorar?',
+        '2. ¿Qué métricas crudas en los recursos y en las interacciones nos dicen el resultado?',
+        '3. ¿Quién mide esas métricas y cómo se auditan?',
+        '4. ¿Cuáles son los OKRs realistas? (Agregar buffer como rango máximo y mínimo; jamás en fecha estática, sino en movimiento).',
+        '5. Documentar, probar, documentar, entender, mejorar y crecer.',
+      ],
+    },
+    {
+      phase: '7. Escalamiento (Matriz de 4 Cuadrantes + Eje Z)',
+      quadrants: [
+        'Cuadrante 1: Importante y urgente.',
+        'Cuadrante 2: Fundacional (elemental & progresivo).',
+        'Cuadrante 3: Urgente y transicional.',
+        'Cuadrante 4: Bajo impacto pero alto consumo de recurso.',
+      ],
+      zAxisNote: 'Eje Z: Variables temporales y circunstanciales. [Hueco documental identificado en inventario: formalizar parámetros matemáticos en fase de consolidación].',
+    },
+  ],
+  bootstrapCycle: 'Partir de función concreta ("Tengo esta brecha operacional") → Resolverla → Medirla → Convertirla en servicio repetible → Estandarizar → Delegar → Escalar.',
+  delegationModel: 'Separar quirúrgicamente: Venta → Diagnóstico → Ejecución → QA → Relación → Arquitectura.',
+  legalSetup: 'Prestación de servicios, modelo contractor independiente, no subordinación laboral, y adaptación de jurisdicción según cliente y país de operación.',
+};
+
+export const RENASCI_AXIS_PLAYBOOK = {
+  name: 'Renasci & Axis Ecosystem',
+  thesis: 'Chief of Scalability como arquitectura externa para empresas que necesitan pasar de una organización funcional a una organización escalable sin romper el sistema que ya funciona. Axis actúa como el sistema de inteligencia y escaneo de breakpoints (post-crisis → pre-breakpoint).',
+  tractionChain: 'Market signal → Operational DD → Resource map → Interaction map → Decision map → Trigger detection → MVP → Intervention → Stress test → Implementation → Knowledge capture → Framework → Replication/Licensing',
+  outputCore: 'Resultado en el cliente + Conocimiento reutilizable para la IP.',
+  resourcesUnderManagement: [
+    'Capital y runway expuesto',
+    'Personas y equipos',
+    'Propiedad Intelectual (IP) y frameworks',
+    'Procesos operativos',
+    'Tecnología y stack',
+    'Relaciones y alianzas',
+    'Decisiones y gobernanza',
+    'Estructura organizacional',
+    'Activos jurídicos y fiduciarios',
+    'Canales comerciales',
+  ],
+  marketPain: 'Una compañía puede estar creciendo y, precisamente por eso, aquello que permitió llegar hasta aquí empieza a convertirse en aquello que impide continuar. El problema no es falta de recursos; es interacción defectuosa entre recursos (Resource → Interaction → Decision → Scalability).',
+  valueProposition: 'Detectar cuellos de botella, dependencias críticas de personas ("héroes"), puntos de fallo, recursos subutilizados, decisiones mal ubicadas y arquitecturas que no escalan.',
+  targetVerticals: [
+    'Startups Series A → Exit',
+    'Venture Capital (Portafolio de startups con fricción)',
+    'Family Offices (Gobernanza y profesionalización de activos)',
+    'B2B White-Label',
+    'Estructuras fiduciarias y patrimoniales',
+    'Expansión internacional',
+  ],
+  financialModel: {
+    triangulation: 'Complejidad del sistema × Capital expuesto × Costo del breakpoint × Capacidad de intervención (desacoplado de horas trabajadas).',
+    documentedRetainers: [
+      { tier: 'Startups Series A', retainer: 'USD $12,000 / mes', context: 'Intervención de cuellos de botella post-financiación' },
+      { tier: 'Startups Series B', retainer: 'USD $25,000 / mes', context: 'Reestructuración de arquitectura de decisiones e interacciones' },
+      { tier: 'Startups Series C', retainer: 'USD $35,000 / mes', context: 'Desacoplamiento de héroes para preparación de escalamiento o M&A' },
+      { tier: 'VC / Family Office', retainer: 'USD $38,000+ / mes', context: 'Auditoría de portafolio y gobernanza patrimonial sistémica' },
+    ],
+  },
+  bootstrapTimeline: [
+    { period: '½ Mes (15 días)', phase: 'Analysis & Operational DD', detail: 'Diagnóstico sistémico, mapa de recursos e interacciones. Identificar burnt y dependencias.' },
+    { period: '½ Mes (15 días)', phase: 'Triggers Detection', detail: 'Identificar señales tempranas de detonación antes de que se conviertan en crisis.' },
+    { period: '1 Mes', phase: 'MVP de Intervención', detail: 'Demostrar que el mecanismo causal propuesto funciona en un subsistema acotado.' },
+    { period: '6 Meses', phase: 'Implementation Architecture', detail: 'Despliegue de la arquitectura de decisiones, automatizaciones e interfaces entre roles.' },
+    { period: '1 Mes', phase: 'Exit & Knowledge Transfer', detail: 'Transferencia total al equipo cliente; retiro del arquitecto sin dejar dependencia.' },
+  ],
+  teamStructure: 'Núcleo pequeño: Chief of Scalability (diseña el sistema, no ejecuta cada función), Specialists (especialistas de nicho), Operators (ejecutores de soporte), Client-side decision makers (dueños del sistema).',
+  salesFunnel: 'Target → Qualification → Systemic Diagnosis → Economic Consequence → Architecture → Intervention Scope → Engagement',
+  deliverables: [
+    'System Diagnosis (Diagnóstico de raíz sistémica)',
+    'Resource Map (Mapeo de capital, talento, IP y tecnología)',
+    'Interaction Map (Mapeo de flujos y fricciones)',
+    'Decision Architecture (Estructura de gobernanza autónoma)',
+    'Trigger Map (Indicadores de alerta previa a crisis)',
+    'MVP de intervención',
+    'Implementation Architecture',
+    'Exit / Transfer Protocol',
+  ],
+  legalJurisdictions: 'Separación patrimonial: Operación local, IP centralizada, Trustee en Panamá, estructuras B2B white-label según necesidad.',
+  foundationalCriterion: 'La supervivencia se diseña antes de que llegue la crisis. Por eso los triggers importan más que reaccionar al evento.',
+};
+
+export const SINGULARITY_PLAYBOOK = {
+  name: 'Singularity Negotiations (Negociación Humanista & High-Stakes)',
+  thesis: 'Arquitectura de negociación premium que integra técnicas tácticas de Chris Voss (empatía táctica, labeling, calibrated questions, Ackerman) con capas humanistas (High-Stakes Confidant, Self-Gap Match y Cosmovisión Black Swan). Se posiciona como superior al mercado transaccional y a Voss puro.',
+  tractionChain: 'Unknown / emerging problem → Market gap → Deconstruction → Hypothesis → Model → Prototype → Stress test → Breakpoint → Reconstruction → New category',
+  coreRole: 'High-Stakes Confidant: El negociador actúa como confidente de confianza profunda en situaciones de alto riesgo (dinero, reputación, equipo, futuro). Va mucho más allá del simple closer transaccional.',
+  admissionCriteriaVeto: {
+    yesCriteria: [
+      'Deal high-ticket o high-stakes (impacto significativo en EBITDA o supervivencia).',
+      'Existe riesgo emocional, reputacional o de legado real.',
+      'Cliente con perfil de madurez premium.',
+      'Posibilidad de contacto directo/físico o relación de confianza.',
+    ],
+    noCriteria: [
+      'Cliente enfocado exclusivamente en precio o commoditización.',
+      'Deals low-ticket o transaccionales masivos.',
+      'Imposibilidad de contacto directo/sensitivo.',
+      'Manipulación deshonesta o desalineación ética radical.',
+    ],
+    threeQuestionsTest: [
+      '1. ¿Me sentiría orgulloso de ser su confidente?',
+      '2. ¿El dolor del cliente justifica un cierre humanista?',
+      '3. ¿Puedo cobrar premium sin regalarme?',
+    ],
+  },
+  coldContactFramework: {
+    name: 'Framework de Contacto Inicial Cisnes Negros (5 Formas Sensitivas Low-Cost <$200)',
+    description: 'Orquestar puntos de contacto físico sensitivo de bajo costo que generan rareza, impredecibilidad y conexión real sin quemar energía en spam digital.',
+    fiveWays: [
+      { number: 1, title: 'Running Clubs / Sweatworking matutinos', context: 'Deporte de resistencia y salud compartida con fundadores/C-Level.' },
+      { number: 2, title: 'Eventos niche de alto valor', context: 'Conferencias o meetups especializados con baja concurrencia masiva pero altos decisores.' },
+      { number: 3, title: 'Caminatas / Cafés en parques premium', context: 'Espacios abiertos no corporativos que reducen la postura defensiva.' },
+      { number: 4, title: 'Voluntariado / Actividades de impacto social', context: 'Conexión desde valores compartidos y legado humano.' },
+      { number: 5, title: 'Eventos deportivos o culturales locales low-cost', context: 'Encuentros casuales con alto componente sensitivo.' },
+    ],
+    hookAExample: '“¿Ya te rendiste de liberar el ROI que el pain te está quitando?” + insight personalizado de su operación.',
+  },
+  fullContactToCloseSequence: [
+    { step: 1, title: 'Cisne Negro (Contacto Físico/Sensitivo)', description: 'Contacto inicial de baja fricción y alta diferenciación.' },
+    { step: 2, title: 'Hook A + Insight', description: 'Pregunta calibrada de resistencia + observación no evidente de su sistema.' },
+    { step: 3, title: 'Encuesta Premium / Preguntas Calibradas', description: 'Exploración con "Cómo" y "Qué" para transferir el control.' },
+    { step: 4, title: 'High-Stakes Confidant Mode', description: 'Empatía táctica profunda; nombrar los miedos inconfesables en voz alta.' },
+    { step: 5, title: 'Self-Gap Match', description: 'Cierre de la brecha entre el "yo real" del decisor y la oferta.' },
+    { step: 6, title: 'Self-Closing', description: 'El cliente articula la solución por sí mismo: "Esto es exactamente lo que necesito". Regla: Si el cliente no se cierra solo, aún no se alineó el yo real.' },
+  ],
+  blackSwanCosmology: [
+    { layer: 1, name: 'Dolor Superficial', score: '1-2 pts', question: '¿Cuál es el principal reto o cuello de botella observable hoy?' },
+    { layer: 2, name: 'Miedo a la Ejecución', score: '1-2 pts', question: '¿Cómo se ha sentido antes cuando una promesa de solución no se cumplió?' },
+    { layer: 3, name: 'Identidad y Legado', score: '3 pts', question: '¿Cómo quieres que tu equipo o tu familia recuerde esta decisión en 5 años?' },
+    { layer: 4, name: 'Stakeholders Ocultos & Política', score: '5 pts', question: '¿A quién más en la sombra le afectaría o molestaría que esto se resuelva?' },
+    { layer: 5, name: 'Estrella del Norte Moral & Emocional', score: '5 pts', question: '¿Qué significaría para ti saber que eres genuinamente parte de la solución?' },
+  ],
+  ackermanModel2026: {
+    steps: [
+      { step: 'Paso 1', target: '100%', detail: 'Definir el objetivo financiero final en privado.' },
+      { step: 'Paso 2', target: '65%', detail: 'Oferta inicial al 65% del objetivo + label empático (“Sé que esto parece ridículo...”).' },
+      { step: 'Paso 3', target: '85% → 95%', detail: 'Subidas escalonadas decrecientes acompañadas de preguntas calibradas de resistencia (“¿Cómo se supone que haga eso?”).' },
+      { step: 'Paso 4', target: '100%', detail: 'Cifra final exacta NO redonda (ej. $12,470 en vez de $12,500) + elemento no monetario (sweetener) + “¿Te parece justo?”.' },
+    ],
+    rentAlternative: 'Caso arriendo documentado: 40% → 57% → 69% del aumento propuesto.',
+  },
+  counterGreene48Laws: [
+    { law: 'Ley 15 (Aplastar al enemigo)', counterVoss: 'Neutralizar con pregunta de justicia mutua: “¿Cómo podemos construir un acuerdo donde ambas partes salgan con dignidad?”' },
+    { law: 'Ley 3 (Ocultar intenciones)', counterVoss: 'Transparencia radical y etiquetado directo: “Parece que hay variables sobre la mesa que aún no hemos nombrado.”' },
+    { law: 'Ley 17 (Suspense / Ghosting)', counterVoss: 'Label de comodidad en el aire: “Parece que ya te diste por vencido con este proyecto / ¿Te sentirías cómodo descartando esto por ahora?”' },
+  ],
+  fourQuadrantsOneSheet: [
+    { quadrant: 'Cuadrante 1', title: 'Labels (Etiquetas)', content: '“Parece que...”, “Suena como si...”, “Da la impresión de que sientes que...”' },
+    { quadrant: 'Cuadrante 2', title: 'Preguntas Calibradas', content: '“¿Cómo se supone que haga eso?”, “¿Qué hace que esto sea prioritario hoy?”' },
+    { quadrant: 'Cuadrante 3', title: 'Ackerman (4 Números)', content: '65% inicial → 85% → 95% → 100% final no redondo + sweetener' },
+    { quadrant: 'Cuadrante 4', title: 'Cisnes Negros', content: 'Espacio en blanco para registrar secretos emocionales, políticos o de legado revelados en la llamada' },
+  ],
+};
+
+export const DIVERGENCE_AUDIT_STRUCTURE = {
+  name: 'Divergence Audit (El Producto Unificado de Entrada)',
+  thesis: 'No vender al mercado cuatro consultorías dispersas (“Splendor”, “JJ”, “Renasci”, “Singularity”). Eso obliga al cliente a entender tu taxonomía. Se vende un solo producto de entrada: Divergence Audit.',
+  coreQuestion: '¿Dónde se está separando la estrategia declarada de la realidad operativa de última milla, y qué mínimo cambio puede reducir esa divergencia?',
+  theFourLenses: [
+    {
+      domain: 'Mercado',
+      instrument: 'JJ Company',
+      guidingQuestion: '¿Estamos resolviendo el problema correcto?',
+      diagnosticScope: 'Dolor declarado vs afectación real, empaquetado de la oferta, adecuación del segmento y unit economics por función.',
+    },
+    {
+      domain: 'Capacidad',
+      instrument: 'Splendor TaaS',
+      guidingQuestion: '¿Tenemos capacidad real para cumplir la promesa?',
+      diagnosticScope: 'Dependencia de personas clave, capacidad ociosa vs saturación, handoffs, latencias, costos de coordinación y heroísmo operativo.',
+    },
+    {
+      domain: 'Sistema',
+      instrument: 'Renasci',
+      guidingQuestion: '¿Puede la arquitectura sostener el crecimiento?',
+      diagnosticScope: 'Interacción entre recursos, incentivos divergentes, estructura de decisiones forzadas y puntos de quiebre pre-crisis.',
+    },
+    {
+      domain: 'Decisión',
+      instrument: 'Axis Ecosystem',
+      guidingQuestion: '¿Estamos viendo y decidiendo sobre la realidad correcta?',
+      diagnosticScope: 'Realidad percibida vs realidad sistémica, sesgos cognitivos del comité y escaneo de vulnerabilidades estructurales.',
+    },
+    {
+      domain: 'Negociación Compleja',
+      instrument: 'Singularity',
+      guidingQuestion: '¿Cómo cerramos la brecha con los decisores clave?',
+      diagnosticScope: 'Actúa cuando surge conflicto de intereses, bloqueo con stakeholders ocultos o regateo de alto riesgo.',
+    },
+    {
+      domain: 'Criterio & IP',
+      instrument: 'Fractalis',
+      guidingQuestion: '¿Se está preservando la esencia y gobernanza del sistema?',
+      diagnosticScope: 'Custodia que el sistema no conserve la forma y pierda el criterio ético y fundacional.',
+    },
+  ],
+  invertedDependencyProtocol: {
+    normalDependency: '“Necesitamos al fundador / auditor para resolver esto.”',
+    invertedDependency: '“El auditor detectó que estamos dependiendo del auditor para resolver algo que estructuralmente debería poder resolver el sistema.”',
+    threeMovements: [
+      { step: '1. Nombrar', statement: '“Esta capacidad actualmente depende de X persona clave.”' },
+      { step: '2. Hacer visible el costo', statement: '“Mientras permanezca así, estos son los riesgos, latencias, costos y puntos de ruptura inminentes.”' },
+      { step: '3. Devolver el ownership', statement: '“Ahora corresponde al responsable del sistema decidir cómo desarrollar, contratar, delegar, automatizar, rediseñar o aceptar esa dependencia.”' },
+    ],
+  },
+  operatorChecklist: {
+    responsibilities: [
+      'Observar la dinámica real de última milla sin juzgar.',
+      'Hacer preguntas calibradas de segundo orden.',
+      'Identificar divergencias entre la estrategia y la operación.',
+      'Hacer visible la dependencia invertida y el heroísmo destructivo.',
+      'Aportar una hipótesis/lente cuando sea pertinente.',
+      'Estructurar el problema en variables crudas.',
+      'Dejar evidencia y criterios documentados en SOPs o matrices.',
+      'Señalar breakpoints y límites de resistencia.',
+      'Devolver la responsabilidad al dueño del sistema y soltar.',
+    ],
+    vetoes: [
+      'NO implementar la solución operativa tú mismo.',
+      'NO administrar equipos ni procesos cotidianos del cliente.',
+      'NO dirigir equipos ni asumir mandos medios.',
+      'NO convertirse en COO / CSO / CFO de facto.',
+      'NO ser el repositorio humano del conocimiento.',
+      'NO sostener emocionalmente al equipo ni asumir culpas ajenas.',
+      'NO responder indefinidamente por el resultado si el cliente no ejecutó.',
+      'NO convertirse nuevamente en “la persona imprescindible que sabe cómo arreglarlo”.',
+    ],
+  },
+};
